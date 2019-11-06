@@ -1,37 +1,57 @@
 for (i = 0; i< 11; i++){
-    document.getElementById("container").innerHTML += "<div class='button number'></div>";
+    document.getElementById("container").innerHTML += "<div class='button number' id='num" + i + "'></div>";
 }
 for (i = 0; i< 7; i++){
-    document.getElementById("container").innerHTML += "<div class='button operator'></div>";
+    document.getElementById("container").innerHTML += "<div class='button operator' id='op" + i + "'></div>";
 }
 
-const NUMBERS = document.querySelectorAll(".number");
-var numberButtons = Array.from(NUMBERS);
-const OPERATORS = document.querySelectorAll(".opeartor");
-var operatorButtons = Array.from(OPERATORS);
 
-for (i = 0; i < numberButtons.length; i++){
-    numberButtons[i].addEventListener("click", (numButtonClick));
+for (i = 0; i < 11; i++){
+    id = "num" + i;
+    document.getElementById(id).addEventListener("click", ((arg) => {return ()=> {numButtonClick(arg)} })(id) );
 }
-for (i = 0; i < operatorButtons.length; i++){
-    operatorButton[i].addEventListener("click", (opButtonClick));
+for (i = 0; i < 7; i++){
+    id = "op" + i;
+    document.getElementById(id).addEventListener("click", ((arg) => {return ()=> {opButtonClick(arg)} })(id) );
 }
 
 function fillButtons(){
-    for (i = 0; i < numberButtons.length; i++){
-        if (i==10) {numberButton[i].innerHTML = ".";}
+    for (i = 0; i < 11; i++){
+        if (i == 10)
+        {
+            document.getElementById('num10').innerHTML = ".";
+        }
         else {
-            numberButton[i].innerHTML = i;
+            id = "num" + i;
+            document.getElementById(id).innerHTML = i;
         }
     }
-
+    document.getElementById('op0').innerHTML = "+";
+    document.getElementById('op1').innerHTML = "-";
+    document.getElementById('op2').innerHTML = "*";
+    document.getElementById('op3').innerHTML = "/";
+    document.getElementById('op4').innerHTML = "=";
+    document.getElementById('op5').innerHTML = "C";
+    document.getElementById('op6').innerHTML = "+/-";
 }
 
-function numButtonClick(){
+function numButtonClick(id){
 
+    if (id == "num10")
+    {
+        document.getElementById('display').innerHTML += ".";
+    }
+    for (i = 0; i < 10; i++)
+    {
+        choice = "num" + i;
+        if (id == choice)
+        {
+            document.getElementById('display').innerHTML += i;
+        }
+    }
 }
 
-function opButtonClick(){
+function opButtonClick(id){
     
 }
 
