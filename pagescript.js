@@ -37,14 +37,13 @@ function fillButtons(){
 
 function numButtonClick(id){
 
-    console.log(id);
     if (id == "num10")
     {
         document.getElementById('display').innerHTML += ".";
     }
     for (i = 0; i < 10; i++)
     {
-        choice = "num" + 1
+        choice = "num" + i;
         if (id == choice)
         {
             document.getElementById('display').innerHTML += i;
