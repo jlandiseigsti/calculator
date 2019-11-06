@@ -1,11 +1,23 @@
+* {
+}
 .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: grey;
     border: 1px solid black;
+    height: auto;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button{
     background-color: white;
     border: 1px solid black;
+    width: 50px;
+    width: 50px;
+    display: inline-block;
 }
 
 .number{
@@ -17,7 +29,7 @@
 }
 
 .display{
-
+width: 100%;
 }
 
 #display{
