@@ -3,12 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
-=======
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <script type="text/javascript" src="pagescripts.js"></script> -->
->>>>>>> 29d53978d7b5e18fd98a0252e18777b36f741d4a
     <link rel="spreadsheet" type = "text/css" href="main.css">
     <title>Calculator</title>
 </head>
@@ -19,36 +14,7 @@
     
 
 <script>
-    for (i = 0; i< 11; i++){
-    document.getElementById("container").innerHTML += "<div class='button number'></div>";
-}
-for (i = 0; i< 7; i++){
-    document.getElementById("container").innerHTML += "<div class='button operator'></div>";
-}
-
-const NUMBERS = document.querySelectorAll(".number");
-var numberButtons = Array.from(NUMBERS);
-const OPERATORS = document.querySelectorAll(".opeartor");
-var operatorButtons = Array.from(OPERATORS);
-
-for (i = 0; i < numberButtons.length; i++){
-    numberButtons[i].addEventListener("click", (numButtonClick));
-}
-for (i = 0; i < operatorButtons.length; i++){
-    operatorButton[i].addEventListener("click", (opButtonClick));
-}
-
-function fillButtons(){
-    for (i = 0; i < numberButtons.length; i++){
-        if (i==10) {numberButton[i].innerHTML = ".";}
-        else {
-            numberButton[i].innerHTML = i;
-        }
-    }
-
-}
-
-function numButtonClick()
+    
 {
 
 }
