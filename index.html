@@ -9,6 +9,7 @@
     <title>Calculator</title>
 </head>
 <body>
+    <div id = "flipper" onclick ="flip()">FLIP CALCULATOR</div>
     <div id = "container">
         <div class = "display" id = "display"></div>
     </div>
@@ -25,6 +26,10 @@
     else if (window.attachEvent)
     window.attachEvent("onload", downloadJSAtOnload);
     else window.onload = downloadJSAtOnload;
+    function flip(){
+        console.log("clicked");
+        document.getElementById("container").classList.toggle("flipped");
+    }
 </script>
 </body>
 </html>
