@@ -29,6 +29,12 @@
     function flip(){
         console.log("clicked");
         document.getElementById("container").classList.toggle("flipped");
+        if (document.getElementById("flipper").innerHTML == "FLIP CALCULATOR"){
+            document.getElementById("flipper").innerHTML = "LOL"
+        }
+        else{
+            document.getElementById("flipper").innerHTML = "FLIP CALCULATOR"
+        }
     }
 </script>
 </body>
