@@ -9,7 +9,7 @@ body{
     text-align: center;
     background-color: #222227;
 }
-.container{
+#container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -49,6 +49,9 @@ background-color: #238912;
 font-size: 48px;
 font-family: 'Anonymous Pro', monospace;
 color: white;   
+overflow: hidden;
+text-align: right;
+padding: 1rem;
 }
 #display{
 }
