@@ -5,14 +5,15 @@ for (i = 0; i< 7; i++){
     document.getElementById("container").innerHTML += "<div class='button operator' id='op" + i + "'></div>";
 }
 
-
 for (i = 0; i < 11; i++){
     id = "num" + i;
-    document.getElementById(id).addEventListener("click", ((arg) => {return ()=> {numButtonClick(arg)} })(id) );
+    // document.getElementById(id).addEventListener("click", ((arg) => { return () => {numButtonClick(arg)} })(id) );
+    document.getElementById(id).addEventListener("click", (event) => { numButtonClick(event) } );
 }
 for (i = 0; i < 7; i++){
     id = "op" + i;
-    document.getElementById(id).addEventListener("click", ((arg) => {return ()=> {opButtonClick(arg)} })(id) );
+    // document.getElementById(id).addEventListener("click", ((arg) => {return ()=> {opButtonClick(arg)} })(id) );
+    document.getElementById(id).addEventListener("click", (event) => { opButtonClick(event) } );
 }
 
 function fillButtons(){
@@ -35,8 +36,9 @@ function fillButtons(){
     document.getElementById('op6').innerHTML = "+/-";
 }
 
-function numButtonClick(id){
-
+function numButtonClick(event){
+    id = event.target.id;
+    
     if (id == "num10")
     {
         document.getElementById('display').innerHTML += ".";
@@ -51,7 +53,8 @@ function numButtonClick(id){
     }
 }
 
-function opButtonClick(id){
+function opButtonClick(event){
+    id = event.target.id;
     
 }
 
