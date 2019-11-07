@@ -16,7 +16,10 @@ body{
     justify-content: space-around;
     align-items: center;
     background-color: grey;
-    border: 5px solid black;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    border-right: 10px solid #333;
+    border-bottom: 10px solid #333;
     border-radius: 25px;
     width: 50%;
     max-width: 400px;
@@ -28,13 +31,13 @@ body{
 }
 .button{
     background-color: #BBB;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 30%;
     /* height: auto; */
     margin: 1%;
     border-radius: 15px;
     padding: 0.5rem;
-    -webkit-box-shadow: 5px 5px 15px -2px #000000; 
+    -webkit-box-shadow: 5px 5px 10px -2px #000000; 
     box-shadow: 5px 5px 15px -2px #000000;
 }
 .number{
