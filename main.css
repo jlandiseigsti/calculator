@@ -7,7 +7,10 @@ body{
     font-weight: bolder;
     font-size: 32px;
     text-align: center;
-    background-color: #222227;
+    background-color: whitesmoke;
+    /* background-image: url('classroom.png');
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
 
 #flipper{
@@ -21,6 +24,8 @@ body{
     align-self: left;
     width: 12em;
     position: absolute;
+    -webkit-box-shadow: 5px 5px 5px -2px #000000; 
+    box-shadow: 5px 5px 15px -2px #000000;
 
 }
 #container{
