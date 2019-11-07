@@ -55,6 +55,46 @@ function numButtonClick(event){
 
 function opButtonClick(event){
     id = event.target.id;
+
+    if (id == "op0") {
+        userNum1 = Number(document.getElementById('display').innerHTML);
+        document.getElementById('display').innerHTML = "";
+        userOp = '+';
+    }
+    if (id == "op1") {
+        userNum1 = Number(document.getElementById('display').innerHTML);
+        document.getElementById('display').innerHTML = "";
+        userOp = '-';
+    }
+    if (id == "op2") {
+        userNum1 = Number(document.getElementById('display').innerHTML);
+        document.getElementById('display').innerHTML = "";
+        userOp = '*';
+    }
+    if (id == "op3") {
+        userNum1 = Number(document.getElementById('display').innerHTML);
+        document.getElementById('display').innerHTML = "";
+        userOp = '/';
+    }
+    if (id == "op5") {
+        userNum1 = "";
+        userNum2 = "";
+        userOp = "";
+        document.getElementById('display').innerHTML = "";
+    }
+    if (id == "op6") {
+        document.getElementById('display').innerHTML = -1 * Number(document.getElementById('display').innerHTML);
+    }
+    if (id == "op4") {
+        userNum2 = Number(document.getElementById('display').innerHTML);
+        if (userOp == "+") { userOut = userNum1 + userNum2; }
+        if (userOp == "-") { userOut = userNum1 - userNum2; }
+        if (userOp == "*") { userOut = userNum1 * userNum2; }
+        if (userOp == "/") { userOut = userNum1 / userNum2; }
+
+        document.getElementById('display').innerHTML = userOut;
+    }
+
     
 }
 
